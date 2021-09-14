@@ -2,6 +2,9 @@ body {
   overflow-x:hidden;
   font-family: "Montserrat", sans-serif;
 }
+
+/* search-field */
+
 .search-field {
   width: 400px;
   border: 2px solid steelblue;
@@ -24,6 +27,9 @@ body {
   border: none;
   outline: none;
 }
+
+/* products items */
+
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -49,6 +55,9 @@ body {
   width: 150px;
   height: 150px;
 }
+
+/* cart items */
+
 .cart {
   width: 350px;
   border: 3px solid gray;
@@ -58,6 +67,9 @@ body {
   margin: 10px 30px;
   position: fixed;
 }
+
+/* media qurey */
+
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
