@@ -4,39 +4,43 @@ const loadProducts = () => {
 };
 
 
-// show all product in UI 
+// show all product in UI
 const showProducts = (products) => {
   console.log(products);
   for (const product of products) {
     const image = product.image;
     const div = document.createElement("div");
-    div.classList.add("single-product");
+    div.classList.add("product");
     div.innerHTML = `
+    <div class="single-product">
       <div>
         <img class="product-image" src=${image}></img>
       </div>
-      <h5>${product.title}</h5>
-      <h5>Category: ${product.category}</h5>
+      <h5 class="text-primary">${product.title}</h5>
+      <h5 class="text-info">Category: ${product.category}</h5>
       <h5 class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h5>
-      <h5>Rating: ${product.rating.rate}</h5>
-      <h5>Person Count: ${product.rating.count}</h5>
+      <h5 class="text-warning">Rating Point: ${product.rating.rate}</h5>
+      <h5 class="text-warning">Rating Count: ${product.rating.count}</h5>
       <h4>Price: $ ${product.price}</h4>
-      <button onclick="addToCart(${product.price})" id="addToCart-btn" class="btn btn-success">add to cart</button>
+      <button onclick="addToCart(${product.price})" id="addToCart-btn" class="btn btn-success">Add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button>
+    </div>
     `;
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// add to cart
 let count = 0;
 const addToCart = (price) => {
   count = count + 1;
   document.getElementById("total-Products").innerText = count;
   updatePrice("price", price);
-
   updateTaxAndCharge();
   updateTotal();
 };
 
+// get value using by a function
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
@@ -79,4 +83,6 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
+
+// call API
 loadProducts();
