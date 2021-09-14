@@ -7,7 +7,6 @@ const loadProducts = () => {
 
 // show all product in UI
 const showProducts = (products) => {
-  console.log(products);
   for (const product of products) {
     const image = product.image;
     const div = document.createElement("div");
