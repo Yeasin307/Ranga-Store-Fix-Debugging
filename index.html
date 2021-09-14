@@ -5,11 +5,17 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>My Shop Cloth Store</title>
+
+  <!-- CSS link -->
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+  <!-- Bootstrap  CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <!-- Bootstrap  Icon link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +25,7 @@
 
 <body>
   <header></header>
-  <main class="main">
+  <main class="ms-3">
     <div class="search-field">
       <input id="input-field" class="search-box" type="text" />
       <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
@@ -28,56 +34,40 @@
       </button>
     </div>
     <div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
-          <!-- <h1></h1> -->
+      <div class="col-md-8 col-lg-8 col-sm-7 col-7">
+        <div id="all-products">
         </div>
       </div>
-      <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
+      <div class="col-md-4 col-lg-4 col-sm-5 col-5">
         <div class="cart" id="my-cart">
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
-              <!-- <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr> -->
+              <h2 class="text-center">My-Cart</h2>
             </thead>
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td><span id="total-Products">0</span></td>
-                <!-- <td></td>
-                <td></td> -->
+                <td id="total-Products" class="fw-bold">0</td>
               </tr>
               <tr>
                 <th>Price:</th>
-                <td>$ <span id="price">0</span></td>
-                <!-- <td></td>
-                <td></td> -->
+                <td class="fw-bold">$ <span id="price">0</span></td>
               </tr>
               <tr>
                 <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
-                <!-- <td></td>
-                <td></td> -->
+                <td class="fw-bold">$ <span id="delivery-charge">20</span></td>
               </tr>
               <tr>
                 <th>Total-Tax:</th>
-                <td>$ <span id="total-tax">0</span></td>
-                <!-- <td></td>
-                <td></td> -->
+                <td class="fw-bold">$ <span id="total-tax">0</span></td>
               </tr>
               <tr>
-                <th scope="row">Total</th>
-                <td colspan="2">$ <span id="total">0</span></td>
-                <!-- <td></td> -->
+                <th class="fs-5 fw-bold">Total</th>
+                <td class="fs-5 fw-bold">$ <span id="total">0</span></td>
               </tr>
             </tbody>
           </table>
-          <div class="parces text-center">
+          <div class="text-center">
             <button class="btn btn-primary text-center">Buy Now</button>
           </div>
         </div>
